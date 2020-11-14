@@ -43,5 +43,6 @@ dependencies {
           테스트 용도로 많이 사용됩니다.
      */
     compile('com.h2database:h2')
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

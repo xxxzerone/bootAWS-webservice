@@ -50,6 +50,16 @@ dependencies {
         * spring-security-oauth2-client와 spring-security-oauth2-jose를 기본으로 관리해줍니다.
      */
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    /*
+        # spring-session-jdbc
+        * 세션을 데이터베이스에 등록 - jdbc
+     */
     compile('org.springframework.session:spring-session-jdbc')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    /*
+        # spring-security-test
+        * 테스트 시 스프링 시큐리티 설정 때문에 인증되지 않은 사용자의 요청 이동으로 에러
+        * 임의로 인증된 사용자를 추가하여 API만 테스트 가능(시큐리티에서 공식적으로 방법 지원)
+     */
+    testCompile('org.springframework.security:spring-security-test')
 }
